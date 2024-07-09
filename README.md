@@ -66,6 +66,34 @@ adversarial_metrics = evaluate_detector(detector, adversarial_images)
 print("Adversarial Metrics:", adversarial_metrics)
 ```
 
+## Simplified Architectural Diagram
+```bash
+        +-----------------------------------+
+        |        Deepfake Detector          |
+        |       (torch-based model)         |
+        +-----------------------------------+
+                   /           \
+                  /             \
+                 /               \
+         +----------------+   +------------------+
+         | White Box      |   | Black Box        |
+         | Attack Module  |   | Attack Module    |
+         +----------------+   +------------------+
+                 |                      |
+                 |                      |
+                 +-----------+----------+
+                             |
+                    +------------------+
+                    | Evaluation Module |
+                    +------------------+
+                             |
+                             |
+                    +------------------+
+                    |   User Interface  |
+                    +------------------+
+
+```
+
 ## Project Structure
 
 ```bash
@@ -89,7 +117,6 @@ deepfake_resilience_tool/
     ├── tool_image.png
     └── README.md
 ```
-
 ### Roadmap and Documentation
 Explore the detailed [Roadmap](https://sagarbhure.github.io/Deepfake-Detector-Resilience/) for the project milestones and future plans.
 
