@@ -66,6 +66,30 @@ adversarial_metrics = evaluate_detector(detector, adversarial_images)
 print("Adversarial Metrics:", adversarial_metrics)
 ```
 
+## Project Structure
+
+```bash
+deepfake_resilience_tool/
+│
+├── README.md
+├── CONTRIBUTING.md
+├── LICENSE
+├── requirements.txt
+│
+├── deepfake_resilience_tool/
+│   ├── __init__.py
+│   ├── detector.py
+│   ├── attacks/
+│   │   ├── __init__.py
+│   │   ├── white_box_attack.py
+│   │   └── black_box_attack.py
+│   └── evaluation.py
+│
+└── docs/
+    ├── tool_image.png
+    └── README.md
+```
+
 ### Roadmap and Documentation
 Explore the detailed [Roadmap](https://sagarbhure.github.io/Deepfake-Detector-Resilience/) for the project milestones and future plans.
 
